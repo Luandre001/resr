@@ -1,8 +1,7 @@
 import streamlit as st
 import pandas as pd
 import time
-import openpyxl
-
+st.set_page_config(page_title='Tubo De PCP',  layout='wide', page_icon=':ambulance:')
 def Modelagem_dados():
     global Base_Oficial
     global Setores
@@ -16,10 +15,7 @@ def Modelagem_dados():
     Base_tubo= Base_tubo.loc[(Base_tubo['Veículo']!='EXPORTAÇÃO')&(Base_tubo['Veículo']!='HUMANA')&(Base_tubo['Veículo']!='HUMANA')
                &(Base_tubo['Veículo']!='CLIENTE RETIRA')&(Base_tubo['Planilha']!=0)]
 Modelagem_dados()
-st.set_page_config(page_title='Tubo De PCP',  layout='wide', page_icon=':ambulance:')
-
 #this is the header
-
 t1, t2 = st.columns((0.1,1)) 
 t2.title("Tubo de Expedição e Produção")
 t2.markdown(":blue[Desenvolvido pro Luan Carvalho]")
