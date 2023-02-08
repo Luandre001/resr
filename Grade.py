@@ -7,8 +7,8 @@ Created on Tue Aug 24 10:17:07 2021
 import streamlit as st
 import time
 import pandas as pd
-import plotly.express as px
-import plotly.graph_objects as go
+#import plotly.express as px
+#import plotly.graph_objects as go
 from  PIL import Image
 
 def Modelagem_dados():
