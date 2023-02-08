@@ -1,6 +1,5 @@
 import streamlit as st
 import pandas as pd
-import time
 st.set_page_config(page_title='Tubo De PCP',  layout='wide', page_icon=':ambulance:')
 def Modelagem_dados():
     global Base_Oficial
