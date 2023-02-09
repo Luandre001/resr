@@ -1,13 +1,14 @@
 import streamlit as st
 import pandas as pd
 st.set_page_config(page_title='Tubo De PCP',  layout='wide', page_icon=':ambulance:')
+
 def Modelagem_dados():
     global Base_Oficial
     global Setores
     global Base
     global Base_tubo
     Base = pd.read_excel("https://docs.google.com/spreadsheets/d/1Vn_Dvy59N45ZJ6cVOIZHG1LcHChLMORqYduuLMrRajM/export?format=xlsx",sheet_name="Expedição")
-    Index_Tubo = ['Data Coleta','Planilha','Hora Coleta','Veículo','Modal','Transportadora','Volumes']
+    #Index_Tubo = ['Data Coleta','Planilha','Hora Coleta','Veículo','Modal','Transportadora','Volumes']
     Base_tubo =Base
     Base_tubo[['Planilha','Volumes Secos','Volumes Inflamável','Volumes Biológico','Volumes Aftosa','Volumes Climatizado I','Volumes Criogênico']]=Base_tubo[['Planilha','Volumes Secos','Volumes Inflamável','Volumes Biológico','Volumes Aftosa','Volumes Climatizado I','Volumes Criogênico']].fillna(0)
     Base_tubo[['Planilha','Volumes','Volumes Secos','Volumes Inflamável','Volumes Biológico','Volumes Aftosa','Volumes Climatizado I','Volumes Criogênico']] =Base_tubo[['Planilha','Volumes','Volumes Secos','Volumes Inflamável','Volumes Biológico','Volumes Aftosa','Volumes Climatizado I','Volumes Criogênico']].astype(int)
